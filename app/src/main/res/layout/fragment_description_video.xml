@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@+id/layout_view_description"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/radius_top_left_top_right_des"
+    app:cardCornerRadius="@dimen/dp18"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/view_drag"
+            android:layout_width="@dimen/dp0"
+            android:layout_height="@dimen/dp4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintWidth_percent="0.2"
+            android:layout_marginTop="@dimen/dp8"
+            android:background="@color/ccc"/>
+
+        <TextView
+            android:id="@+id/tv_description_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="Description"
+            android:textSize="@dimen/dp24"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/dp24"
+            android:layout_marginLeft="@dimen/dp24"/>
+
+        <ImageView
+            android:id="@+id/iv_x_describe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/tv_description_dialog"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/tv_description_dialog"
+            android:layout_marginRight="@dimen/dp12"
+            android:src="@drawable/ic_cancel"/>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_dialog"
+            android:layout_marginTop="@dimen/dp12"
+            android:background="@color/ccc" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nv_contains_des"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/view_line"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_contains_des"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tv_title_des"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:text="@string/v_a_h_c_v_a_nh_n_b_u_tr_i_xanh_tuy_t_p_h_c_c_ng_t_i_b_s_u_t_p_nh_c_n_n_xu_t_1_gi"
+                    android:layout_marginTop="@dimen/dp12"
+                    android:layout_marginLeft="@dimen/dp12"
+                    android:layout_marginRight="@dimen/dp12"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/dp17"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_avt_channel_des"
+                    android:layout_width="0dp"
+                    android:layout_height="44dp"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title_des"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_title_des"
+                    app:layout_constraintHeight_percent="0.3"
+                    app:layout_constraintWidth_percent="0.1"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/iv_main_model"/>
+
+                <TextView
+                    android:id="@+id/tv_name_channel_des"
+                    android:layout_width="@dimen/dp0"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/iv_avt_channel_des"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_avt_channel_des"
+                    app:layout_constraintLeft_toRightOf="@id/iv_avt_channel_des"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintWidth_percent="0.8"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    android:text="@string/app_name"
+                    android:textSize="@dimen/dp15"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tv_number_like_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name_channel_des"
+                    android:layout_marginTop="@dimen/dp18"
+                    app:layout_constraintRight_toLeftOf="@id/tv_number_view_des"
+                    android:text="@string/_247"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp18"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_view_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_number_like_des"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_number_like_des"
+                    app:layout_constraintRight_toRightOf="@id/tv_number_like_des"
+                    android:text="@string/likes"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:textColor="@color/color75gey"/>
+
+                <TextView
+                    android:id="@+id/tv_number_view_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/tv_number_like_des"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_number_like_des"
+                    app:layout_constraintTop_toTopOf="@id/tv_number_like_des"
+                    app:layout_constraintRight_toLeftOf="@id/tv_number_time_des"
+                    android:text="@string/_28_583"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp18"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_like_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_number_view_des"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_number_view_des"
+                    app:layout_constraintRight_toRightOf="@id/tv_number_view_des"
+                    android:text="@string/views"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:textColor="@color/color75gey"/>
+
+                <TextView
+                    android:id="@+id/tv_number_time_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toRightOf="@id/tv_number_view_des"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_number_view_des"
+                    app:layout_constraintTop_toTopOf="@id/tv_number_view_des"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="@string/jul_10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/dp18"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_time_des"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/tv_number_time_des"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_number_time_des"
+                    app:layout_constraintRight_toRightOf="@id/tv_number_time_des"
+                    android:text="@string/_2002"
+                    android:layout_marginTop="@dimen/dp2"
+                    android:textColor="@color/color75gey"/>
+
+                <View
+                android:id="@+id/view_line_bottom_info"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp0dot7"
+                    app:layout_constraintTop_toBottomOf="@id/tv_view_des"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_marginTop="@dimen/dp18"
+                    android:background="@color/color75gey"/>
+
+                <TextView
+                    android:id="@+id/tv_des_main"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/view_line_bottom_info"
+                    app:layout_constraintLeft_toLeftOf="@id/tv_title_des"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="@id/tv_title_des"
+                    android:paddingTop="@dimen/dp18"
+                    android:layout_marginBottom="@dimen/dp18"
+                    android:autoLink="all"
+                    android:textColorLink="@color/color_link"
+                    android:textColor="@color/black"
+                    android:text="@string/v_a_h_c_v_a_nh_n_b_u_tr_i_xanh_tuy_t_p_h_c_c_ng_t_i_b_s_u_t_p_nh_c_n_n_xu_t_1_gi"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

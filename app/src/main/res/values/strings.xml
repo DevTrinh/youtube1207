@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="explore">Explore</string>
+    <string name="library">Library</string>
+    <string name="notifications">Notification</string>
+    <string name="subscriptions">Subscription</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="save_to_watch_later">Save to Watch later</string>
+    <string name="report">Report</string>
+    <string name="don_t_recommend_channel">Don\'t recommend channel</string>
+    <string name="not_interested">Not interested</string>
+    <string name="share">Share</string>
+    <string name="save_to_playlist">Save to playlist</string>
+    <string name="home">Home</string>
+    <string name="comments">Comments</string>
+    <string name="remember_to_keep_comments_respectful_and_to_follow_our">Remember to keep comments respectful and to follow our</string>
+    <string name="community_guidelines">Community Guidelines</string>
+    <string name="add_a_comment">Add a comment</string>
+    <string name="_12d_ago">12d ago</string>
+    <string name="_30_replies">30 replies</string>
+    <string name="_2_1_k">2.1 K</string>
+    <string name="title_activity_only_play_video">OnlyPlayVideo</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="text_long_test">✈️ Vừa học vừa nhìn bầu trời xanh tuyệt đẹp / HỌC CÙNG TÔI! / Bộ sưu tập nhạc nền đề xuất / 1 giờ</string>
+    <string name="_10_month_ago">10 month ago</string>
+    <string name="studying_while_listen_to_this_perfect">Studying while listen to this, perfect !</string>
+    <string name="_3_6k">3.6K</string>
+    <string name="_1_12m_subscribers">1.12M subscribers</string>
+    <string name="v_a_h_c_v_a_nh_n_b_u_tr_i_xanh_tuy_t_p_h_c_c_ng_t_i_b_s_u_t_p_nh_c_n_n_xu_t_1_gi">✈️ Vừa học vừa nhìn bầu trời xanh tuyệt đẹp / HỌC CÙNG TÔI! / Bộ sưu tập nhạc nền đề xuất / 1 giờ</string>
+    <string name="freak_d_music">Freak D Music</string>
+    <string name="share_video">SHARE VIDEO</string>
+    <string name="_247">247</string>
+    <string name="_28_583">28,583</string>
+    <string name="likes">Likes</string>
+    <string name="jul_10">Jul 10</string>
+    <string name="views">Views</string>
+    <string name="_2002">2002</string>
+</resources>
