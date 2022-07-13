@@ -59,4 +59,6 @@ public interface InterfaceDefaultValue {
     String AUTHOR_PROFILE_IMAGE_URL = "authorProfileImageUrl";
     String TOTAL_REPLY_COUNT = "totalReplyCount";
     String TOP_LEVEL_COMMENT  = "topLevelComment";
+
+    int RQS_RECORDING = 1;
 }

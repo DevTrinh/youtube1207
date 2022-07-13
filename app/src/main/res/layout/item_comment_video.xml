@@ -36,8 +36,8 @@
         app:layout_constraintTop_toTopOf="@id/tv_item_name_channel"
         app:layout_constraintLeft_toRightOf="@id/tv_item_name_channel"
         app:layout_constraintBottom_toBottomOf="@id/tv_item_name_channel"
-        android:layout_marginLeft="@dimen/dp4"
-        android:layout_marginRight="@dimen/dp4"
+        android:layout_marginLeft="@dimen/dp8"
+        android:layout_marginRight="@dimen/dp8"
         android:background="@color/color5e"/>
 
     <TextView

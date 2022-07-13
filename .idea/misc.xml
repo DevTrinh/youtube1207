@@ -70,6 +70,10 @@
         <entry key="..\:/Youtube0507/app/src/main/res/layout/activity_play.xml" value="0.16969185310257492" />
         <entry key="..\:/Youtube0507/app/src/main/res/layout/activity_play_v.xml" value="0.17" />
         <entry key="..\:/Youtube0507/app/src/main/res/layout/fragment_home.xml" value="0.209375" />
+        <entry key="..\:/youtube1207/app/src/main/res/layout/fragment_comment_video.xml" value="0.209375" />
+        <entry key="..\:/youtube1207/app/src/main/res/layout/item_comment_video.xml" value="0.33" />
+        <entry key="..\:/youtube1207/app/src/main/res/layout/item_main_video.xml" value="0.134375" />
+        <entry key="..\:/youtube1207/app/src/main/res/layout/layout_bottom_sheet_list_comment.xml" value="0.11041666666666666" />
       </map>
     </option>
   </component>

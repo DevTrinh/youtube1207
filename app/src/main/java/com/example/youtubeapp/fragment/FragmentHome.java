@@ -60,7 +60,6 @@ public class FragmentHome extends Fragment implements InterfaceDefaultValue,
     private int currentPage = 0;
     private int totalPage = 5;
 
-    @SuppressLint("NotifyDataSetChanged")
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container,
                              Bundle savedInstanceState) {

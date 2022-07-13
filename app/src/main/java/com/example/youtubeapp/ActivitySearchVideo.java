@@ -8,8 +8,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.speech.RecognizerIntent;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -28,6 +32,7 @@ import com.example.youtubeapp.preferences.PrefListSearch;
 import com.example.youtubeapp.preferences.PrefSearch;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class ActivitySearchVideo extends AppCompatActivity implements InterfaceDefaultValue {
     private RecyclerView rvHistorySearch;
@@ -38,7 +43,9 @@ public class ActivitySearchVideo extends AppCompatActivity implements InterfaceD
     private ArrayList<String> listSearchString = new ArrayList<>();
     private TextView tvHistorySearch;
     private PrefSearch prefSearch;
-    private ImageView ivBackHome;
+    private ImageView ivBackHome, ivMic;
+
+    private final int REQ_CODE_SPEECH_INPUT = 100;
 
     @SuppressLint("NotifyDataSetChanged")
     @Override
@@ -93,12 +100,52 @@ public class ActivitySearchVideo extends AppCompatActivity implements InterfaceD
             }
         });
 
+        ivMic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                promptSpeechInput();
+            }
+        });
+
         ivBackHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
         });
+    }
+
+    private void promptSpeechInput() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
+                RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT,
+                getString(R.string.speech_prompt));
+        try {
+            startActivityForResult(intent, REQ_CODE_SPEECH_INPUT);
+        } catch (ActivityNotFoundException a) {
+            Toast.makeText(getApplicationContext(),
+                    getString(R.string.speech_not_supported),
+                    Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case REQ_CODE_SPEECH_INPUT: {
+                if (resultCode == RESULT_OK && null != data) {
+
+                    ArrayList<String> result = data
+                            .getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    etSearch.setText(result.get(0));
+                }
+                break;
+            }
+        }
     }
 
     @NonNull
@@ -138,6 +185,7 @@ public class ActivitySearchVideo extends AppCompatActivity implements InterfaceD
     }
 
     public void mapping(){
+        ivMic = findViewById(R.id.iv_mic);
         ivBackHome = findViewById(R.id.ic_back_search);
         rvHistorySearch = findViewById(R.id.rv_history_search);
         tvHistorySearch = findViewById(R.id.tv_history);

@@ -203,7 +203,6 @@ public class ActivityPlayVideo extends AppCompatActivity
         clComment.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (btSheetComment.getState() != BottomSheetBehavior.STATE_EXPANDED) {
                     btSheetComment.setState(BottomSheetBehavior.STATE_EXPANDED);
                     setDataComment(id);
@@ -387,9 +386,9 @@ public class ActivityPlayVideo extends AppCompatActivity
 
     private void setDataComment(String idVideo) {
         String API_LIST_COMMENT_VIDEO =
-                "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=100&order=relevance&textFormat=plainText&videoId=" +
-                        idVideo +
-                        "&key=AIzaSyAbvtmmDLsgGdKMB2Lqa6vDXZhYd7QFkC4&fbclid=IwAR3WPsV7YUhleTcSEzTMCEQKKqMokxOUqwFEO41ELUw0s7TVhUjmaSRmlAg";
+                "https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet&maxResults=100&order=relevance&textFormat=plainText&videoId="
+                        + idVideo + "&key=" + API_KEY
+                        +"&fbclid=IwAR3WPsV7YUhleTcSEzTMCEQKKqMokxOUqwFEO41ELUw0s7TVhUjmaSRmlAg";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 API_LIST_COMMENT_VIDEO, null, new Response.Listener<JSONObject>() {
